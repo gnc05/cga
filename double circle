@@ -1,0 +1,35 @@
+#include<graphics.h>
+#include<conio.h>
+#include<math.h>
+#include<stdio.h>
+main()
+{
+	int rc,rb,xc,yc;
+	int gd=DETECT, gm;
+	float x,y;
+	initgraph(&gd,&gm,"C:\\TC\\BGI");
+	int z=getmaxx()/2;
+    printf("Entyer the radius of outer circle: ");
+    scanf("%d",&rc);
+    printf("Enter the radius of inner circle: ");
+    scanf("%d",&rb);
+    printf("Enter the centre of the circle: ");
+    scanf("%d %d",&xc,&yc);
+    
+    
+    for(int i=1;i<=360;i++)
+    {
+    	x=xc+(rb*(cos(i)));
+    	y=yc+(rb*(sin(i)));
+    	putpixel(x,y,7);
+	}
+	for(int i=1;i<=360;i++)
+    {
+    	x=xc+(rc*(cos(i)));
+    	y=yc+(rc*(sin(i)));
+    	putpixel(x,y,7);
+	}
+            getch();
+	closegraph();
+	return 0;
+}
