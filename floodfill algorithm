@@ -8,7 +8,6 @@ int main()
 {
 int gdriver=DETECT, gmode, x,y,r;
 initgraph(&gdriver, &gmode, "C:\\TC\\BGI");
-outtextxy(250,100,"ADNAN 33");
 printf("Enter the Center of circle (x,y) : ");
 scanf("%d %d",&x,&y);
 printf("Enter the Radius of circle r : ");
